@@ -35,7 +35,7 @@ public class StudentService {
 	public StudentWrapper getStudentById(Long id)throws RecordNotFoundException{
 		StudentWrapper studentWrapperOutput=null;
 		
-		Optional<Student> studentOptionalData= repository.findById(id);
+		Optional<Student> studentOptionalData= repository.findById(inputStudent.getId());
 		
 		if(studentOptionalData.isPresent()) {
 			studentWrapperOutput= new StudentWrapper();
