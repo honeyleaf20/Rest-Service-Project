@@ -52,7 +52,7 @@ public class StudentService {
 	public StudentWrapper updateStudentDetails(StudentWrapper inputStudent)throws RecordNotFoundException{
 		
 		
-		Optional<Student> studentOptionalData= repository.findById(id);
+		Optional<Student> studentOptionalData= repository.findById(inputStudent.getId());
 		
 		if(studentOptionalData.isPresent()) {
 			Student student= studentOptionalData.get();
